@@ -1,0 +1,125 @@
+/* =========================================================================
+   PALET WAKTU & TEMA UTAMA APLIKASI LABORATORIUM PANGAN POLTESA
+   ========================================================================= */
+:root {
+    --primary-tosca: #4DB6AC;
+    --secondary-hijau-telur-asin: #A8D5BA;
+    --accent-mint-soft: #C2E7D5;
+    --bg-gradient-start: #D6EAE3;
+    --bg-gradient-end: #EEF6F3;
+    --surface-card: #F7FBF9;
+    --text-primary: #2F3E46;
+    --text-secondary: #60717A;
+    --border-soft: #D6E2DF;
+    
+    /* Warna Notifikasi Status Sistem */
+    --status-success: #63C78C;
+    --status-info: #4CA3FF;
+    --status-warning: #FFCB57;
+    --status-danger: #E57373;
+    --status-light: #E9EDEE;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================================
+   KOMPONEN VISUAL SIDEBAR TERPUSAT (GRADASI TOSCA ELEGAN)
+   ========================================================================= */
+.sidebar-premium {
+    background: linear-gradient(180deg, var(--primary-tosca), #399E95);
+    color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 4px 0 15px rgba(47, 62, 70, 0.05);
+}
+
+.sidebar-premium .brand-section {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-premium .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 6px 16px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.sidebar-premium .nav-link i {
+    font-size: 18px;
+    width: 24px;
+}
+
+.sidebar-premium .nav-link:hover, 
+.sidebar-premium .nav-link.active {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-weight: 600;
+    transform: translateX(4px);
+}
+
+/* =========================================================================
+   KOMPONEN INTERFACES: CARDS, TABLES, & FORMS
+   ========================================================================= */
+.card-counter {
+    background: var(--surface-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(47, 62, 70, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-counter:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(47, 62, 70, 0.07);
+}
+
+.form-input-pangan {
+    width: 100%;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-input-pangan:focus {
+    border-color: var(--primary-tosca);
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(77, 182, 172, 0.2);
+}
+
+/* Badge Dinamis Sirkulasi Status */
+.badge-status {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+.status-pending { background-color: var(--status-warning); color: #2F3E46; }
+.status-dipinjam { background-color: var(--status-info); color: #ffffff; }
+.status-selesai { background-color: var(--status-success); color: #ffffff; }
+.status-terlambat { background-color: var(--status-danger); color: #ffffff; }
+
+/* Customization DataTables Override */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--primary-tosca) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--primary-tosca) !important;
+    border-radius: 8px !important;
+}
